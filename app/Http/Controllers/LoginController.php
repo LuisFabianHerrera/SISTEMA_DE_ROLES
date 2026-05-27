@@ -19,7 +19,7 @@ class LoginController extends Controller
         'password' => $request->password
     ];
 
-    if (Auth::attempt($credenciales)) {
+    if (Auth::attempt($credenciales,true)) {
 
         $request->session()->regenerate();
 
